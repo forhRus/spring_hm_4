@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelef.org">
+<meta charset="UTF-8">
+<title>Редактирование данных</title>
+</head>
+<body>
+<form th:action="@{/students/update/{id}(id=${student.id})}" th:object="${student}" method="post">
+    <h2>Данные пользователя с Id: <span th:text="${id}">ID</span></h2>
+    <table>
+        <tr>
+            <td><label for="lastName">Фамилия</label></td>
+            <td> <input type="text" th:field="*{lastName}" id="lastName" placeholder="Фамилия"> </td>
+        </tr>
+        <tr>
+            <td><label for="firstName">Имя</label></td>
+            <td><input type="text" th:field="*{firstName}" id="firstName" placeholder="Имя"></td>
+        </tr>
+        <tr>
+            <td><label for="surName">Отчество</label></td>
+            <td><input type="text" th:field="*{surName}" id="surName" placeholder="Отчество"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Возраст</label></td>
+            <td><input type="text" th:field="*{age}" id="age" placeholder="Возраст"></td>
+        </tr>
+        <tr>
+            <td><label for="course">Курс</label></td>
+            <td><input type="text" th:field="*{course}" id="course" placeholder="Курс"></td>
+        </tr>
+    </table>
+    <input type="submit" value="Обновить данные">
+    <a href="/students">Назад</a>
+</form>
+</body>
+</html>

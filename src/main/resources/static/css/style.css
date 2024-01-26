@@ -1,0 +1,13 @@
+.list_students a, table {
+    color: white;
+}
+.list_students {
+    margin: 10 auto;
+    align-items: center;
+    background: white;
+    border-spacing: 1px;
+}
+.list_students td, th {
+    background: #5e758f;
+    padding: 5px;
+}
